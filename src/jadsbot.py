@@ -26,6 +26,11 @@ async def on_ready():
 async def ping(ctx):
     await ctx.send('Pong!')
 
+@bot.command()
+async def off(ctx):
+    await ctx.send('Bot desativado!')
+
+
 # Rodar o bot com o token do arquivo .env
 if __name__ == "__main__":
     bot.run(bot_token)
