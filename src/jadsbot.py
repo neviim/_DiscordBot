@@ -16,6 +16,19 @@ intents.messages = True  # Ativar eventos de mensagens
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
+# Notificação quando o usuário específico "neviim" envia uma mensagem no canal "dev"
+@bot.event
+async def on_message(message):
+    print(f'Nome: {message.author.name} Canal: {message.channel.name}')
+
+    if message.author.name == ".neviim" and message.channel.name == "dev":
+        user_jads = discord.utils.get(message.guild.members, name="alephtaw_")
+        print('Passo 1')
+        
+        if user_jads:
+            await user_jads.send(f'O usuário {message.author.name} enviou uma mensagem no canal #dev: {message.content}')
+    await bot.process_commands(message)
+
 # Evento de exemplo para garantir que o bot está funcionando corretamente
 @bot.event
 async def on_ready():
