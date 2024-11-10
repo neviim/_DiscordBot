@@ -21,8 +21,8 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_message(message):
     print(f'Nome: {message.author.name} Canal: {message.channel.name}')
 
-    if message.author.name == ".neviim" and message.channel.name == "dev":
-        user_jads = discord.utils.get(message.guild.members, name="alephtaw_")
+    if message.author.name == "Xpto" and message.channel.name == "dev":
+        user_jads = discord.utils.get(message.guild.members, name="Ypto")
         print('Passo 1')
         
         if user_jads:
