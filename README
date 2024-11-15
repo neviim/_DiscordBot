@@ -1,1 +1,21 @@
-Discord bot 
+## pockemon
+
+Repositorio:
+https://render.com/
+
+```shell
+pip freeze
+
+pip install -r requirements.txt
+```
+
+# Pikachu, Charizard, mew
+
+```shell
+$poke pikachu
+$poke charizand
+$poke mew
+
+$limpar
+```
+

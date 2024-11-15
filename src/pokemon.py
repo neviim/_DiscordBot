@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 
 import os
 import requests
+import webserver
 #import secrets 
 
 # Carregar as variáveis de ambiente do arquivo .env
@@ -56,6 +57,7 @@ async def limpar(ctx):
 
 # Rodar o bot com o token do arquivo .env
 if __name__ == "__main__":
+    webserver.keep_alive()
     bot.run(bot_token)
 
 

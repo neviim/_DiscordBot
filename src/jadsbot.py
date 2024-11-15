@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 import discord
 from discord.ext import commands
+import webserver
 
 # Carregar as variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -46,4 +47,5 @@ async def off(ctx):
 
 # Rodar o bot com o token do arquivo .env
 if __name__ == "__main__":
+    webserver.keep_alive()
     bot.run(bot_token)
